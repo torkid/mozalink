@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "MZ"  // <--- Hapa ndipo umebadilisha kutoka TZ kwenda MZ
+        }
+      ],
+      "dest": "https://penzi-shata.vercel.app/$1",
+      "status": 307
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
