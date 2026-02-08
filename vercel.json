@@ -2,15 +2,39 @@
   "version": 2,
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/offer1(.*)",
       "has": [
         {
           "type": "header",
           "key": "x-vercel-ip-country",
-          "value": "MZ"  
+          "value": "TZ"
         }
       ],
-      "dest": "https://smrturl.co/a/s7ebf6fc0f6/6911?s1=/$1",
+      "dest": "https://bongogram.vercel.app/$1",
+      "status": 307
+    },
+    {
+      "src": "/offer2(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "TZ"
+        }
+      ],
+      "dest": "https://kutombana.vercel.app/$1",
+      "status": 307
+    },
+    {
+      "src": "/special(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "x-vercel-ip-country",
+          "value": "TZ"
+        }
+      ],
+      "dest": "https://penzi-shata.vercel.app/$1",
       "status": 307
     },
     {
